@@ -143,6 +143,10 @@
     },
     "go": {},
     "nodejs": {},
-    "python": {}
+    "python": {
+      "moduleNameOverrides": {
+        "tree/v1": "tree/v1"
+      }
+    }
   }
 }
