@@ -529,7 +529,11 @@ func (pkg *pkgContext) genEnumType(w io.Writer, name string, enumType *schema.En
 		if e.Name == "" {
 			elementName = fmt.Sprintf("%v", e.Value)
 		}
-		e.Name = name + makeSafeEnumName(elementName)
+		enumName := makeSafeEnumName(elementName)
+		if strings.Contains(enumName, "_") {
+			enumName = fmt.Sprintf("_%s", enumName)
+		}
+		e.Name = name + enumName
 		contract.Assertf(!modPkg.names.has(e.Name), "Name collision for enum constant: %s for %s",
 			e.Name, enumType.Token)
 		switch reflect.TypeOf(e.Value).Kind() {

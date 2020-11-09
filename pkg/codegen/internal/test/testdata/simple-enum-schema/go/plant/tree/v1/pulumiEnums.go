@@ -14,14 +14,14 @@ import (
 type Farm pulumi.String
 
 const (
-	FarmPulumi_Planters_Inc_ = Farm("Pulumi Planters Inc.")
-	FarmPlants_R_Us          = Farm("Plants'R'Us")
+	Farm_Pulumi_Planters_Inc_ = Farm("Pulumi Planters Inc.")
+	Farm_Plants_R_Us          = Farm("Plants'R'Us")
 )
 
 func (Farm) possibleValues() map[Farm]bool {
 	return map[Farm]bool{
-		FarmPulumi_Planters_Inc_: true,
-		FarmPlants_R_Us:          true,
+		Farm_Pulumi_Planters_Inc_: true,
+		Farm_Plants_R_Us:          true,
 	}
 }
 

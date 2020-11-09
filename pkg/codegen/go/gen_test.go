@@ -116,7 +116,7 @@ func TestEnumUsage(t *testing.T) {
 					Material: pulumi.String("ceramic"),
 					Size:     plant.ContainerSizeFourInch,
 				},
-				Farm: tree.FarmPlants_R_Us,
+				Farm: tree.Farm_Plants_R_Us,
 				Type: tree.RubberTreeVarietyRuby,
 			})
 			require.NoError(t, err)
@@ -151,7 +151,7 @@ func TestEnumUsage(t *testing.T) {
 					Material: pulumi.String("ceramic"),
 					Size:     plant.ContainerSize(22),
 				},
-				Farm: tree.FarmPlants_R_Us,
+				Farm: tree.Farm_Plants_R_Us,
 				Type: tree.RubberTreeVarietyRuby,
 			})
 			require.NoError(t, err)
@@ -186,7 +186,7 @@ func TestEnumUsage(t *testing.T) {
 					Material: pulumi.String("ceramic"),
 					Size:     plant.ContainerSize(22),
 				},
-				Farm: tree.FarmPlants_R_Us,
+				Farm: tree.Farm_Plants_R_Us,
 				Type: "Burgundy",
 			})
 			require.NoError(t, err)
@@ -220,7 +220,7 @@ func TestEnumUsage(t *testing.T) {
 					Color:    plant.ContainerColorRed,
 					Material: pulumi.String("ceramic"),
 				},
-				Farm: tree.FarmPlants_R_Us,
+				Farm: tree.Farm_Plants_R_Us,
 				Type: "Mauve",
 			})
 			require.Error(t, err)
